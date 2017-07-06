@@ -1,0 +1,9 @@
+<launch>
+
+	<node pkg="stage_ros" name="stage" type="stageros" args="/opt/ros/kinetic/share/stage_ros/world/willow-erratic.world"/>
+	<node pkg="teleop_twist_keyboard" name="controller" type="teleop_twist_keyboard.py" output="screen"/>
+	<node pkg="homework1" name="laser_listener" type="laser_listener"/>
+
+	<node pkg="homework1" name="collision_listener" type="collision_listener"/>
+
+</launch>

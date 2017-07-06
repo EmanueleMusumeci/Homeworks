@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="homework4" name="output_window" type="output_window" launch-prefix="xterm -e" args="4"/>
+	<node pkg="stage_ros" name="stage" type="stageros" args="/opt/ros/kinetic/share/stage_ros/world/willow-erratic.world"/>
+	<node pkg="teleop_twist_keyboard" name="teleop" type="teleop_twist_keyboard.py" launch-prefix="xterm -e"/>
+</launch>
