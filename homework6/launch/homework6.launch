@@ -1,0 +1,4 @@
+<launch>
+	<include file="/opt/ros/kinetic/share/openni_launch/launch/openni.launch" />
+	<node pkg="homework6" name="homework" type="homework" launch-prefix="xterm -e"/>
+</launch>

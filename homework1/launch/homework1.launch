@@ -1,0 +1,9 @@
+<launch>
+
+	<node pkg="stage_ros" name="stage" type="stageros" args="/home/mrmannym/ROS_projects/Homework/src/homework1/world/homework.world"/>
+	<node pkg="teleop_twist_keyboard" name="controller" type="teleop_twist_keyboard.py" output="screen" launch-prefix="xterm -geometry 40x20+0+495 -e"/>
+	<node pkg="homework1" name="laser_listener" type="laser_listener" launch-prefix="xterm -geometry 108x20+706+495 -e"/>
+
+	<node pkg="homework1" name="collision_listener" type="collision_listener" launch-prefix="xterm -geometry 65x20+310+495 -e"/>
+
+</launch>

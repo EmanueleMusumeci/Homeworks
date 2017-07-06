@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="stage_ros" name="stage" type="stageros" args="/opt/ros/kinetic/share/stage_ros/world/willow-erratic.world"/>
+  <node pkg="homework5" name="server" type="homework5_server" launch-prefix="xterm -e"/>
+	<node pkg="homework5" name="client" type="homework5_client" launch-prefix="xterm -e"/>
+</launch>

@@ -19,7 +19,7 @@ class LaserListener
       ROS_INFO("\n\n\nI'M HEEEERE!!!!\n\n\n");
 			laser_subscriber = n.subscribe<sensor_msgs::LaserScan>("/base_scan", 1000, &LaserListener::scanCallback, this);
 			odom_subscriber = n.subscribe<nav_msgs::Odometry>("/odom", 1000, &LaserListener::odomCallback, this);
-      transform_listener.waitForTransform("/base_scan", "/base_link", ros::Time(0), ros::Duration(1.0));
+      transform_listener.waitForTransform("/base_laser_link", "/base_link", ros::Time(0), ros::Duration(1.0));
     }
 
     void odomCallback(nav_msgs::Odometry msg)
@@ -30,7 +30,7 @@ class LaserListener
 		void scanCallback(sensor_msgs::LaserScan msg)
 		{
       try {
-          transform_listener.lookupTransform("/base_scan", "/base_link", ros::Time(0), latest_transform);
+          transform_listener.lookupTransform("/base_laser_link", "/base_link", ros::Time(0), latest_transform);
       }
       catch (tf::TransformException &ex) {
         ROS_ERROR("%s",ex.what());
