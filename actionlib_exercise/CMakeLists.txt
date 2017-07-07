@@ -221,7 +221,7 @@ target_link_libraries(
   ${catkin_LIBRARIES}
 )
 
-#add_dependencies(countdown_server ${actionlib_exercise_EXPORTED_TARGETS})
+add_dependencies(countdown_server ${actionlib_exercise_EXPORTED_TARGETS})
 
 add_executable(start_countdown_client src/start_countdown_client.cpp)
 
@@ -230,7 +230,7 @@ target_link_libraries(
   ${catkin_LIBRARIES}
 )
 
-#add_dependencies(start_countdown_client ${actionlib_exercise_EXPORTED_TARGETS})
+add_dependencies(start_countdown_client ${actionlib_exercise_EXPORTED_TARGETS})
 
 add_executable(stop_countdown_client src/stop_countdown_client.cpp)
 
@@ -239,4 +239,4 @@ target_link_libraries(
   ${catkin_LIBRARIES}
 )
 
-#add_dependencies(stop_countdown_client ${actionlib_exercise_EXPORTED_TARGETS})
+add_dependencies(stop_countdown_client ${actionlib_exercise_EXPORTED_TARGETS})
