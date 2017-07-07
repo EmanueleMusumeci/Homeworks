@@ -221,7 +221,7 @@ target_link_libraries(
   ${catkin_LIBRARIES}
 )
 
-#add_dependencies(homework5_server ${homework5_EXPORTED_TARGETS})
+add_dependencies(homework5_server ${homework5_EXPORTED_TARGETS})
 
 add_executable(homework5_client src/homework5_client.cpp)
 
@@ -230,4 +230,4 @@ target_link_libraries(
   ${catkin_LIBRARIES}
 )
 
-#add_dependencies(homework5_client ${homework5_EXPORTED_TARGETS})
+add_dependencies(homework5_client ${homework5_EXPORTED_TARGETS})
